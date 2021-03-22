@@ -1,0 +1,137 @@
+<!-- <section class="text-gray-600 body-font">
+  
+  <div *ngIf="products" class="container px-5 py-24 mx-auto">
+    
+    <router-outlet>
+    
+    </router-outlet> 
+    <div  class="flex flex-wrap -m-4">
+      
+      <div  *ngFor="let data of products" class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a [routerLink]="['/', data.routename]"  routerLinkActive="active current" class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{data.imageUrlBanner}}">
+        </a>
+        <div class="mt-4">
+          
+          <h2 class="text-gray-900 title-font text-lg font-medium">{{data.name}}</h2>
+          <p class="mt-1">{{data.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<router-outlet></router-outlet>
+<section *ngIf="myVar" class="text-gray-600 body-font">
+
+  <div  *ngFor="let data of products" class="container px-5 py-20 mx-auto">
+    <h2 class="text-gray-900 text-2xl title-font text-lg font-medium ">{{data.name}}</h2>
+    <div  class="flex flex-wrap -m-4">
+      
+      <div  *ngFor="let r of data.range" class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a  class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{r.imageUrl}}">
+        </a>
+        <div class="mt-4">
+          
+          <h2 class="text-gray-900 title-font text-lg font-medium">{{r.description}}
+          </h2>
+          <p class="mt-1">{{data.price}}
+            <button (click)="onSelect(r)"  class="flex  place-items-end bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">View</button>
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section class="text-gray-600 body-font">
+    
+    <div class="container px-5 py-24 mx-auto">
+        
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a href="" class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./../../assets/images/merchandise/diary/Slice 1 (11).jpg">
+          </a>
+          <div class="mt-4">
+            
+            <h2 class="text-gray-900 title-font text-lg font-medium">Diaries</h2>
+            
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a href="" class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./../../assets/images/merchandise/tshirt/Slice 1 (10).jpg">
+          </a>
+          <div class="mt-4">
+            
+            <h2 class="text-gray-900 title-font text-lg font-medium">T shirts</h2>
+            
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a href="" class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./../../assets/images/merchandise/mug/Rectangle 1 (1).jpg">
+          </a>
+          <div class="mt-4">
+            
+            <h2 class="text-gray-900 title-font text-lg font-medium">Mugs</h2>
+            
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a href="" class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./../../assets/images/merchandise/phonecase/Slice 1 (12).jpg">
+          </a>
+          <div class="mt-4">
+            
+            <h2 class="text-gray-900 title-font text-lg font-medium">Phone Cases</h2>
+            
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a href="" class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./../../assets/images/merchandise/postcard/Slice 1 (27).jpg">
+          </a>
+          <div class="mt-4">
+            
+            <h2 class="text-gray-900 title-font text-lg font-medium">Postcards</h2>
+            
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a href="" class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./../../assets/images/merchandise/art/Slice 1 (22).jpg">
+          </a>
+          <div class="mt-4">
+            
+            <h2 class="text-gray-900 title-font text-lg font-medium">Art Prints</h2>
+            
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a href="" class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./../../assets/images/merchandise/mask/Slice 1 (16).jpg">
+          </a>
+          <div class="mt-4">
+            
+            <h2 class="text-gray-900 title-font text-lg font-medium">Face Masks</h2>
+            
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a href="" class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./../../assets/images/merchandise/tote/Slice 1 (15).jpg">
+          </a>
+          <div class="mt-4">
+            
+            <h2 class="text-gray-900 title-font text-lg font-medium">Tote Bags</h2>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->

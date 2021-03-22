@@ -1,0 +1,22 @@
+<section class="text-gray-600 body-font overflow-hidden">
+  <div class="container px-5 py-24 mx-auto">
+    <button (click)="backClicked()" class=" text-white bg-gray-300 border-0 py-1 px-5 focus:outline-none hover:bg-gray-400 rounded">Back</button>
+    <div class="lg:w-4/5 mx-auto flex flex-wrap">
+      
+      <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{val.imageUrl}}">
+      <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+        
+        <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{val.title}}</h1>
+        <p class="leading-relaxed">{{val.description}}</p>
+
+        <div class="flex">
+          <span class="title-font font-medium text-2xl text-gray-900">{{val.price}}</span>
+          
+        </div>
+        <button class=" ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+          <a href="{{val.buy}}" target="_blank">Buy Now</a>
+          </button>
+      </div>
+    </div>
+  </div>
+</section>

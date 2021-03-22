@@ -1,0 +1,44 @@
+{
+    "merch": [
+      {
+        "id": 1,
+        "name": "Notebooks",
+        "src": "Ernesto Valverde"
+        
+      },
+      {
+        "id": 2,
+        "name": "Real Madrid",
+        "coach": "Zinedine Zidane",
+        "description": "The worst football team in the world!"
+      }
+    ],
+    "paintings": [
+        {
+          "id": 1,
+          "name": "Notebooks",
+          "coach": "Ernesto Valverde",
+          "description": "The best football team in the world!"
+        },
+        {
+          "id": 2,
+          "name": "Real Madrid",
+          "coach": "Zinedine Zidane",
+          "description": "The worst football team in the world!"
+        }
+      ],
+      "comics": [
+        {
+          "id": 1,
+          "name": "Notebooks",
+          "coach": "Ernesto Valverde",
+          "description": "The best football team in the world!"
+        },
+        {
+          "id": 2,
+          "name": "Real Madrid",
+          "coach": "Zinedine Zidane",
+          "description": "The worst football team in the world!"
+        }
+      ]
+  }
