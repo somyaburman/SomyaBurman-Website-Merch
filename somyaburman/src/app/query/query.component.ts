@@ -13,7 +13,7 @@ export class QueryComponent implements OnInit {
   }
 
   sendQuery(){
-    alert("Query Submitted");
+    //alert("Query Submitted");
   }
 
 }
