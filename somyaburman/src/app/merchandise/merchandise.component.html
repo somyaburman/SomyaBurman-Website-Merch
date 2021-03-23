@@ -21,7 +21,7 @@
   </div>
 </section> -->
 <router-outlet></router-outlet>
-<section *ngIf="myVar" class="text-gray-600 body-font">
+<section  class="text-gray-600 body-font">
 
   <div  *ngFor="let data of products" class="container px-5 py-20 mx-auto">
     <h2 class="text-gray-900 text-2xl title-font text-lg font-medium ">{{data.name}}</h2>
@@ -33,10 +33,10 @@
         </a>
         <div class="mt-4">
           
-          <h2 class="text-gray-900 title-font text-lg font-medium">{{r.description}}
+          <h2 class="text-gray-900 title-font text-lg font-medium">{{r.title}}
           </h2>
           <p class="mt-1">{{data.price}}
-            <button (click)="onSelect(r)"  class="flex  place-items-end bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">View</button>
+            <button  [routerLink]="['/merchandise', r.id]" (click)="onSelect()" routerLinkActive="active current"  class="flex  place-items-end bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">View</button>
           </p>
           
         </div>

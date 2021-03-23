@@ -11,23 +11,24 @@ import {Router } from '@angular/router';
 export class MerchandiseComponent implements OnInit {
 
   products:  any  = (data  as  any).default;
-  myVar : boolean = true;
+  myVar : boolean ;
 
   constructor(private router : Router) { 
     
   }
 
   ngOnInit(): void {
+    this.myVar=true;
     console.log(data);
     console.log(data);
     console.log(data);
     console.log("data");
   }
 
-onSelect(r){
-  this.router.navigate(['/request', r.id]);
-  console.log(r);
-  this.myVar=false;
+onSelect(){
+  //this.router.navigate(['/request', r.id]);
+  //console.log(r);
+  //this.myVar=!this.myVar;
   
 }
 
